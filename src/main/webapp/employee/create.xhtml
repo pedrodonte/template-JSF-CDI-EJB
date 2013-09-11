@@ -6,7 +6,7 @@
 	template="/templates/default.xhtml">
 
 	<ui:define name="body">
-		<h1>Index Employees Create</h1>
+		<h1>Enregistrer un employé</h1>
 		<br />
 		<h:form class="form-horizontal">
 			
@@ -48,7 +48,12 @@
 			
 			<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-6">
-					<h:commandButton id="create" value="Ajouter" action="#{employeMB.register}" ajax="false" styleClass="btn btn-primary" />
+					<h:commandButton id="ajouter" value="Ajouter" action="#{employeMB.register}" ajax="false" styleClass="btn btn-primary" />
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-6">
+					<h:commandButton id="list" value="Liste des employés" action="#{employeMB.listEmploye()}" immediate="true" styleClass="btn btn-primary" />
 				</div>
 			</div>
 			

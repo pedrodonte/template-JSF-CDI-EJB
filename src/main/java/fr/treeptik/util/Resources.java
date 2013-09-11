@@ -25,6 +25,9 @@ import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import fr.treeptik.wsimport.Weather;
+import fr.treeptik.wsimport.WeatherSoap;
+
 
 public class Resources {
 
@@ -43,4 +46,10 @@ public class Resources {
         return FacesContext.getCurrentInstance();
     }
 
+    @Produces
+    public WeatherSoap getWeatherSoap(){
+    	
+    	Weather weather = new Weather();
+    	return weather.getWeatherSoap();
+    }
 }
